@@ -1,6 +1,6 @@
 const sidebarItems = [
-  { label: 'Intake Workspace', icon: '▣', active: false },
-  { label: 'Patient Cases', icon: '◫', active: true },
+  { label: 'Intake Workspace', icon: '▣', active: false, to: '/patient-intake'  },
+  { label: 'Patient Cases', icon: '◫', active: true ,to: '/dashboard' },
   { label: 'Clinical Insights', icon: '✦', active: false },
   { label: 'Settings', icon: '⚙', active: false },
 ];
@@ -21,6 +21,7 @@ export default function Sidebar() {
           <button
             key={item.label}
             type="button"
+            to={item.to}
             className={item.active ? 'sidebar-item active' : 'sidebar-item'}
           >
             <span className="sidebar-item__icon">{item.icon}</span>

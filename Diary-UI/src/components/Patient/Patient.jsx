@@ -157,6 +157,120 @@ function PatientSummaryCard() {
   );
 }
 
+function SearchAndAddPatient() {
+  return (
+    <div className="patient-intake__toolbar">
+      <div className="patient-intake__toolbar-search">
+        <span className="patient-intake__toolbar-search-icon">⌕</span>
+        <input type="text" value="Search patient by MRN or name" readOnly aria-label="Search patient" />
+      </div>
+
+      <button type="button" className="patient-intake__toolbar-button">+ Add New Patient</button>
+    </div>
+  );
+}
+
+function DetailCard({ title, subtitle, children }) {
+  return (
+    <section className="patient-intake__detail-card">
+      <div className="patient-intake__detail-card-header">
+        <div>
+          <span className="patient-intake__detail-label">{title}</span>
+          <strong>{subtitle}</strong>
+        </div>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function PatientDetailsForm() {
+  return (
+    <DetailCard title="Patient Details" subtitle="Primary encounter profile">
+      <div className="patient-intake__field-grid">
+        <label className="patient-intake__field">
+          <span>First Name</span>
+          <input type="text" value="Eleanor" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Last Name</span>
+          <input type="text" value="Vance" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>MRN</span>
+          <input type="text" value="MRN-0042-2018" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Date of Birth</span>
+          <input type="text" value="Nov 14, 1976" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Gender</span>
+          <input type="text" value="Female" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Room</span>
+          <input type="text" value="Room 204" readOnly />
+        </label>
+        <label className="patient-intake__field patient-intake__field--wide">
+          <span>Address</span>
+          <input type="text" value="1087 Westbrook Ave, Boston, MA" readOnly />
+        </label>
+      </div>
+    </DetailCard>
+  );
+}
+
+function AttendingDoctorForm() {
+  return (
+    <DetailCard title="Attending Doctor Details" subtitle="Clinical lead">
+      <div className="patient-intake__field-grid">
+        <label className="patient-intake__field">
+          <span>Doctor Name</span>
+          <input type="text" value="Dr. Marcus Storring" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Specialty</span>
+          <input type="text" value="Emergency Medicine" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Clinical Bay</span>
+          <input type="text" value="ED Bay 04 • West Wing" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Assigned Time</span>
+          <input type="text" value="08:30 AM" readOnly />
+        </label>
+      </div>
+    </DetailCard>
+  );
+}
+
+function AssistantDetailsForm() {
+  return (
+    <DetailCard title="Assistant Details" subtitle="Support clinical staff">
+      <div className="patient-intake__field-grid">
+        <label className="patient-intake__field">
+          <span>Primary Assistant</span>
+          <input type="text" value="Nurse Lauren Moss" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Role</span>
+          <input type="text" value="ED RN" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Contact</span>
+          <input type="text" value="(617) 555-0132" readOnly />
+        </label>
+        <label className="patient-intake__field">
+          <span>Care Team</span>
+          <input type="text" value="2 staff assigned" readOnly />
+        </label>
+      </div>
+    </DetailCard>
+  );
+}
+
 function TagList() {
   return (
     <div className="patient-intake__tags">
@@ -278,6 +392,13 @@ export function PatientInTake() {
           <IntakeHeader />
           <PatientSummaryCard />
           <TagList />
+          <SearchAndAddPatient />
+
+          <div className="patient-intake__detail-layout">
+            <PatientDetailsForm />
+            <AttendingDoctorForm />
+            <AssistantDetailsForm />
+          </div>
 
           <div className="patient-intake__content">
             <div className="patient-intake__column">

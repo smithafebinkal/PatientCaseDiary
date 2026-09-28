@@ -9,3 +9,243 @@
 .search-box {
   width: 400px;
 }
+
+.patient-intake-mobile {
+  margin: 0 16px 20px;
+  padding: 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(129, 139, 171, 0.18);
+  box-shadow: 0 10px 24px rgba(69, 87, 132, 0.05);
+}
+
+.patient-intake-mobile__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.patient-intake-mobile__eyebrow {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7483a6;
+  margin-bottom: 6px;
+}
+
+.patient-intake-mobile__header h2 {
+  margin: 0;
+  font-size: 1.7rem;
+  line-height: 1.1;
+  letter-spacing: -0.06em;
+  color: #1c2439;
+}
+
+.patient-intake-mobile__save {
+  border: none;
+  background: #edf1ff;
+  color: #4d56d7;
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.patient-intake-mobile__card {
+  background: #ffffff;
+  border: 1px solid rgba(128, 139, 172, 0.16);
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.patient-intake-mobile__identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-intake-mobile__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #ccd8ff, #edf2ff);
+  color: #334b8d;
+  font-weight: 800;
+}
+
+.patient-intake-mobile__identity-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-intake-mobile__name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.patient-intake-mobile__name-row h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2d4a;
+}
+
+.patient-intake-mobile__badge {
+  background: #edf1ff;
+  color: #5059d3;
+  border-radius: 999px;
+  padding: 4px 7px;
+  font-size: 0.56rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.patient-intake-mobile__meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  color: #6d7a93;
+  font-size: 0.66rem;
+}
+
+.patient-intake-mobile__meta-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(126, 134, 163, 0.14);
+}
+
+.patient-intake-mobile__meta-columns > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.patient-intake-mobile__meta-label {
+  font-size: 0.58rem;
+  color: #7a88a5;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.patient-intake-mobile__meta-columns strong {
+  font-size: 0.7rem;
+  line-height: 1.4;
+  color: #1a2335;
+}
+
+.patient-intake-mobile__toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0 18px;
+}
+
+.patient-intake-mobile__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(129, 138, 170, 0.18);
+  border-radius: 12px;
+  padding: 0 12px;
+  color: #7282a4;
+}
+
+.patient-intake-mobile__search input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.76rem;
+  color: #667796;
+  outline: none;
+}
+
+.patient-intake-mobile__button {
+  min-height: 42px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #5d53ff, #7c70ff);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  box-shadow: 0 12px 24px rgba(93, 83, 255, 0.18);
+}
+
+.patient-intake-mobile__form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.patient-intake-mobile__panel {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(129, 139, 171, 0.16);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.patient-intake-mobile__panel-label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.68rem;
+  color: #7786a9;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.patient-intake-mobile__field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+.patient-intake-mobile__field-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.patient-intake-mobile__field-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+.patient-intake-mobile__field-grid span {
+  font-size: 0.58rem;
+  color: #667796;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.patient-intake-mobile__field-grid input {
+  min-height: 36px;
+  border: 1px solid rgba(128, 139, 171, 0.18);
+  border-radius: 10px;
+  background: #f4f7ff;
+  color: #1d2940;
+  font-size: 0.74rem;
+  padding: 0 10px;
+}
+
+@media (max-width: 480px) {
+  .patient-intake-mobile__meta-columns,
+  .patient-intake-mobile__field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-intake-mobile__header {
+    flex-direction: column;
+  }
+}

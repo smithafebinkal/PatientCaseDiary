@@ -2,6 +2,136 @@ import Sidebar from "../../components/Layout/Sidebar";
 import Topbar from "../../components/Layout/Topbar/Topbar";
 import TopNavigation from "../../components/TopNavigation/TopNavigation";
 
+function PatientIntakeMobile() {
+  return (
+    <section className="patient-intake-mobile" aria-label="Patient intake form">
+      <header className="patient-intake-mobile__header">
+        <div>
+          <span className="patient-intake-mobile__eyebrow">Encounter ID #NFC-2024-8902</span>
+          <h2>New Patient Intake</h2>
+        </div>
+        <button type="button" className="patient-intake-mobile__save">Auto-save</button>
+      </header>
+
+      <div className="patient-intake-mobile__card">
+        <div className="patient-intake-mobile__identity">
+          <div className="patient-intake-mobile__avatar">E</div>
+          <div className="patient-intake-mobile__identity-copy">
+            <div className="patient-intake-mobile__name-row">
+              <h3>Eleanor Vance</h3>
+              <span className="patient-intake-mobile__badge">New Consultation</span>
+            </div>
+            <div className="patient-intake-mobile__meta-row">
+              <span>MRN-0042-2018</span>
+              <span>DOB: Nov 14, 1976</span>
+              <span>Room 204</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="patient-intake-mobile__meta-columns">
+          <div>
+            <span className="patient-intake-mobile__meta-label">Attending clinician</span>
+            <strong>Dr. Marcus Storring, DO</strong>
+          </div>
+          <div>
+            <span className="patient-intake-mobile__meta-label">Clinical bay</span>
+            <strong>ED Bay 04 • West Wing</strong>
+          </div>
+        </div>
+      </div>
+
+      <div className="patient-intake-mobile__toolbar">
+        <label className="patient-intake-mobile__search">
+          <span>⌕</span>
+          <input type="text" value="Search patient by MRN or name" readOnly aria-label="Search patient" />
+        </label>
+        <button type="button" className="patient-intake-mobile__button">+ Add New Patient</button>
+      </div>
+
+      <div className="patient-intake-mobile__form-stack">
+        <section className="patient-intake-mobile__panel">
+          <span className="patient-intake-mobile__panel-label">Patient Details</span>
+          <div className="patient-intake-mobile__field-grid">
+            <label>
+              <span>First Name</span>
+              <input type="text" value="Eleanor" readOnly />
+            </label>
+            <label>
+              <span>Last Name</span>
+              <input type="text" value="Vance" readOnly />
+            </label>
+            <label>
+              <span>MRN</span>
+              <input type="text" value="MRN-0042-2018" readOnly />
+            </label>
+            <label>
+              <span>DOB</span>
+              <input type="text" value="Nov 14, 1976" readOnly />
+            </label>
+            <label>
+              <span>Gender</span>
+              <input type="text" value="Female" readOnly />
+            </label>
+            <label>
+              <span>Room</span>
+              <input type="text" value="Room 204" readOnly />
+            </label>
+            <label className="full-width">
+              <span>Address</span>
+              <input type="text" value="1087 Westbrook Ave, Boston, MA" readOnly />
+            </label>
+          </div>
+        </section>
+
+        <section className="patient-intake-mobile__panel">
+          <span className="patient-intake-mobile__panel-label">Attending Doctor Details</span>
+          <div className="patient-intake-mobile__field-grid">
+            <label>
+              <span>Doctor Name</span>
+              <input type="text" value="Dr. Marcus Storring" readOnly />
+            </label>
+            <label>
+              <span>Specialty</span>
+              <input type="text" value="Emergency Medicine" readOnly />
+            </label>
+            <label>
+              <span>Bay</span>
+              <input type="text" value="ED Bay 04" readOnly />
+            </label>
+            <label>
+              <span>Time</span>
+              <input type="text" value="08:30 AM" readOnly />
+            </label>
+          </div>
+        </section>
+
+        <section className="patient-intake-mobile__panel">
+          <span className="patient-intake-mobile__panel-label">Assistant Details</span>
+          <div className="patient-intake-mobile__field-grid">
+            <label>
+              <span>Primary Assistant</span>
+              <input type="text" value="Nurse Lauren Moss" readOnly />
+            </label>
+            <label>
+              <span>Role</span>
+              <input type="text" value="ED RN" readOnly />
+            </label>
+            <label>
+              <span>Contact</span>
+              <input type="text" value="(617) 555-0132" readOnly />
+            </label>
+            <label>
+              <span>Care Team</span>
+              <input type="text" value="2 staff assigned" readOnly />
+            </label>
+          </div>
+        </section>
+      </div>
+    </section>
+  );
+}
+
 const metrics = [
   { label: 'Active In-Patients', value: '18', delta: '+12%', tone: 'mint' },
   { label: 'Pending Review', value: '6', delta: '+4%', tone: 'blue' },
@@ -66,6 +196,8 @@ export default function Dashboard() {
       <main className="main-panel">
         <TopNavigation />
         <Topbar />
+
+        <PatientIntakeMobile />
 
         <section className="metrics-grid" aria-label="Case summary metrics">
           {metrics.map((metric) => (
